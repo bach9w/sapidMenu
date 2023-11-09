@@ -1,4 +1,4 @@
-import styles from './globals.css';
+import styles from './styles.module.css';
 
 export const metadata = {
 	title: 'Next.js',
