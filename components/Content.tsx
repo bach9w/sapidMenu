@@ -39,7 +39,7 @@ export const List = () => {
 
 	return (
 		<>
-			<article className=" sm:flex items-start sm:space-x-4 p-3">
+			<article className="static sm:grid grid-cols-3 grid-rows-3 gap-1 items-start sm:space-y-0 p-6">
 				{content.length > 0 ? (
 					content.map((content) => (
 						<div
@@ -54,7 +54,7 @@ export const List = () => {
 									{content.description}
 								</p>
 							</div>
-							<div className="w-1/2 absolute lg:relative right-0 sm:relative sm:w-20 items-center  bg-slate-500 text-white rounded-lg text-center space-x-5 text-lg">
+							<div className="w-1/2 absolute right-0  sm:w-20 sm:relative items-center  bg-slate-500 text-white rounded-lg text-center space-x-5 text-lg">
 								{content.price}
 								ЛВ
 							</div>

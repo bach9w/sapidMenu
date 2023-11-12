@@ -2,7 +2,7 @@ import styles from './globals.css';
 
 export const metadata = {
 	title: 'SAPID',
-	description: 'SAPID COCKTAILS & FOOD',
+	description: 'COCKTAILS & FOOD',
 };
 
 export default function RootLayout({

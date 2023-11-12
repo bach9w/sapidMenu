@@ -1,0 +1,104 @@
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	min-height: 100vh; /* Адаптиране на височината на контейнера според съдържанието */
+	background-color: #7c4dff; /* Примерен цвят на фона */
+}
+
+.card {
+	background-color: skyblue;
+	border-radius: 16px;
+	padding: 20px;
+	width: 250px;
+	max-width: 100%;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transform: scale(1);
+}
+
+.card:hover {
+	transform: scale(1.05);
+}
+
+.card-expanded {
+	position: fixed; /* Или `absolute`, в зависимост от контекста на разположение */
+	top: 30%;
+	left: 20%;
+
+	width: 80%; /* Или фиксирана ширина, ако предпочитате */
+	max-width: 500px; /* Променете според нуждите на дизайна */
+	min-height: 300px; /* Променете според нуждите на дизайна */
+	background-color: white;
+	border-radius: 20px;
+	padding: 20px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+	z-index: 1000; /* Уверете се, че това е по-високо от всички други z-index във вашия интерфейс */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; /* Ако имате елементи, които трябва да са разположени в горната и долната част на картата */
+}
+.card-expanded .close-button {
+	align-self: flex-end; /* Поставя бутона в горния десен ъгъл */
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+}
+
+.card-expanded .close-button:before {
+	content: '×'; /* Символ за затваряне */
+	font-size: 24px; /* Или друг размер, който считате за подходящ */
+	color: #7c4dff; /* Или друг цвят, ако е необходимо */
+}
+
+/* Стилове за текст и друго съдържание в картите */
+.card h5,
+.card p,
+.card-expanded h5,
+.card-expanded p {
+	margin: 0;
+	color: #333;
+}
+
+.card p,
+.card h5 {
+	margin-bottom: 8px;
+	font-size: 1.2em;
+}
+
+.card-expanded h5 {
+	font-size: 1.5em; /* Променете според нуждите на дизайна */
+	color: #333;
+	margin: 0 0 20px 0; /* Добавете маржини за разстояние между заглавието и описанието */
+}
+
+.card-expanded p {
+	color: #555;
+	line-height: 1.6; /* За по-добра четимост */
+}
+
+.card-expanded h2 {
+	font-size: 2em;
+	margin-top: 8px;
+}
+
+/* Стил за текста "Tap to open a card." */
+.card-container p {
+	color: white;
+	text-align: center;
+	margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+	.card-expanded {
+		width: 90%; /* По-голяма ширина за малки екрани */
+		min-width: 0; /* Отменя минималната ширина, ако е необходимо */
+		padding: 10px; /* По-малко padding за малки екрани */
+		max-height: 90%; /* По-голяма максимална височина за малки екрани */
+	}
+}
+/* Ако имате анимация при кликване на картата, добавете стиловете тук */
