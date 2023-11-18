@@ -10,8 +10,8 @@ type LivestreamProps = {
 
 // Дефиниране на компонента
 const Livestream: React.FC<LivestreamProps> = ({
-	width = 3824,
-	height = 2160,
+	width = 1024,
+	height = 1024,
 	autoPlay = true,
 	mute = true,
 }) => {
