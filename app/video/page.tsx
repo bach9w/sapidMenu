@@ -4,7 +4,7 @@ import Livestream from './Livestream'; // Актуализирайте пътя 
 const VideoPage = () => {
 	return (
 		<div>
-			<Livestream />
+			<h1 className="text-center">Monika</h1>
 		</div>
 	);
 };
