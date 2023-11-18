@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Определяне на типа за props на компонента
 type LivestreamProps = {
 	width?: number;
 	height?: number;
@@ -7,6 +8,7 @@ type LivestreamProps = {
 	mute?: boolean;
 };
 
+// Дефиниране на компонента
 const Livestream: React.FC<LivestreamProps> = ({
 	width = 3824,
 	height = 2160,
@@ -28,4 +30,5 @@ const Livestream: React.FC<LivestreamProps> = ({
 	);
 };
 
+// Експортиране на компонента
 export default Livestream;
